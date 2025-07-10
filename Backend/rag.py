@@ -18,7 +18,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 # WARNING: Hardcoding API key is not secure for production.
 # Use environment variables instead: os.getenv("GEMINI_API_KEY")
 # Example: GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-GEMINI_API_KEY = "YOUR_GEMINI_API_KEY" # !!! Replace with your actual key
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 if not GEMINI_API_KEY:
     logging.error("GEMINI_API_KEY is not set! RAG generation will fail.")
